@@ -1,7 +1,10 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        String menu = "아메리카노";
-        int quantity = 2;
+        Scanner scanner = new Scanner(System.in);
+        String menu = scanner.nextLine();
+        int quantity = scanner.nextInt();
         int price = Menu.getPrice(menu);
         int total = OrderCalculator.calculate(price, quantity);
         System.out.println("주문");
