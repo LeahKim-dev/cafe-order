@@ -1,14 +1,14 @@
 public class OrderCalculator {
-    public static int calculate(int price, int quality) {
+    public static int calculate(int price, int quantity) {
         double discount;
-        if(quality>=10){
+        if(quantity>=10){
             discount = 0.9;
         }else{
             discount = 1.0;
         }
 
-        if (quality > 0) {
-            return (int)(price * quality * discount);
+        if (quantity > 0) {
+            return (int)(price * quantity * discount);
         } else return 0;
     }
 }
